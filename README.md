@@ -13,6 +13,7 @@ My artist website https://www.robertheel.com/++/
 - [Bank System](#bank-system)
 - [Display](#display)
 - [Current Algorithm Bank Overview](#current-algorithm-bank-overview)
+- [User contributions / Alternative firmwares](#user-contributions--alternative-firmwares)
 - [Hardware Setup](#hardware-setup)
 - [Pin Mapping](#pin-mapping)
 - [Audio Output](#audio-output)
@@ -146,6 +147,20 @@ Exception: algo 1 has osc1 fixed, pot1 = osc2 freq, pot2 = osc3 freq.
 | 7 | Square NAND | 2 squares | `~(sq1 & sq2) & 0x3FF` | Transmission and static interferences. |
 | 8 | Two Saws | Dual saws, averaged | `(saw1 + saw2) >> 1` | Rich sonic scapes.|
 | 9 | Square OR Square | 2 squares | `sq1 \| sq2` | Marching toys. |
+
+<sub>[Back to sections list](#sections)</sub>
+<br></br>
+
+## User contributions / Alternative firmwares
+### Punji Talkie bank 
+
+[Punji](https://github.com/Punji) wrote a great bank addition. TalkiePCM is a speech synthesis library by [Phil Schatzmann ](https://github.com/pschatzmann/TalkiePCM)
+that emulates the Texas Instruments TMS5220, a variant of the chip used in the Speak&Spell toy from 1978.
+
+This alternative firmware for Noisferatu adds a new bank of voices based on TalkiePCM. Three of the algorithms use a large vocabulary of speech data with over 600 words while the other six algorithms generate random speech frames.
+
+This firmware you can find here: 
+https://github.com/Punji/noisferatu
 
 <sub>[Back to sections list](#sections)</sub>
 
